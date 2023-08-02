@@ -24,7 +24,7 @@ class TestClass {
                 System.out.println(0);
             }
         }
-
+        sc.close();
     }
 
     public static int bfs(int[][] region,int r,int c,int length){

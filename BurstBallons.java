@@ -17,6 +17,7 @@ public class BurstBallons {
             }
         }
         int ans=maxCoins(nums,dp,1,nums.length-2);
+        System.out.println(ans);
     }
 
     private static int maxCoins(int[] nums, int[][] dp,int l,int r) {

@@ -1,15 +1,15 @@
 import java.util.*;
 public class WormholeSpaceship {
     public static void main(String[] args) {
-        List<wormhole> coords = new ArrayList<>();
-        int graphIndex =1;
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         for(int test_case=1;test_case<=T;test_case++){
+            List<wormhole> coords = new ArrayList<>();
+            int graphIndex =1;
+            int nwh = sc.nextInt();
             wormhole src = new wormhole(sc.nextInt(), sc.nextInt());
             coords.add(src);
             wormhole dest = new wormhole(sc.nextInt(), sc.nextInt());
-            int nwh = sc.nextInt();
             int graph[][] = new int[2*nwh+2][2*nwh+2];
             for(int i=0;i<graph.length;i++){
                 for(int j=0;j<graph[0].length;j++){
@@ -51,9 +51,10 @@ public class WormholeSpaceship {
             graph[graph.length-1][0] = distance(coords.get(0).x, coords.get(0).x, coords.get(graph.length-1).x, coords.get(graph.length-1).y);
             boolean visited[] = new boolean[graph.length];
             getMinDistance(graph,0,(graph.length-1),visited,0);
-            System.out.println("Minimum Distance: "+ans);
-            sc.close();
+            System.out.println(ans);
+            ans=Integer.MAX_VALUE;
         }
+        sc.close();
     }
     public static int ans = Integer.MAX_VALUE;
     private static void getMinDistance(int[][] graph, int src, int dest, boolean[] visited, int currDist) {

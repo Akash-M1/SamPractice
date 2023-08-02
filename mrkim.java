@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class mrkim {
+public class MrKim {
     public static int ans=Integer.MAX_VALUE;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -31,12 +31,6 @@ public class mrkim {
                     }
                     graph[i][j]=distance(coords.get(i), coords.get(j));
                 }
-            }
-            for(int i =0;i<graph.length;i++){
-                for(int j=0;j<graph[0].length;j++){
-                    System.out.print(graph[i][j]+"\t");
-                }
-                System.out.println();
             }
             boolean visited[] = new boolean[n+2];
             getMinDistance(graph, visited, 0, 0,0,n);

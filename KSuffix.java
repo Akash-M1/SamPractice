@@ -55,5 +55,6 @@ public class KSuffix
         //     String ans = kthSuffix(str,k);
         //     System.out.println("#"+test_case+" "+ans);
         // }
+        sc.close();
     }
 }

@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BaseStation {
@@ -31,7 +30,6 @@ public class BaseStation {
                     }
                 }
             }
-            System.out.println(Arrays.toString(graph));
             System.out.println("#"+test_case+" "+ans);
         }
         sc.close();
